@@ -1,0 +1,31 @@
+SELECT 
+    u.user_id,
+    b.room_no
+FROM users u
+JOIN bookings b ON u.user_id = b.user_id
+WHERE b.booking_date = (
+    SELECT MAX(b2.booking_date)
+    FROM bookings b2
+    WHERE b2.user_id = u.user_id
+);
+
+"usr-003"	"RM-108"
+"usr-004"	"RM-404"
+"usr-005"	"RM-110"
+"usr-006"	"RM-201"
+"usr-007"	"RM-308"
+"usr-008"	"RM-402"
+"usr-009"	"RM-109"
+"usr-010"	"RM-205"
+"usr-011"	"RM-108"
+"usr-001"	"RM-110"
+"usr-012"	"RM-207"
+"usr-013"	"RM-305"
+"usr-014"	"RM-401"
+"usr-015"	"RM-302"
+"usr-016"	"RM-203"
+"usr-017"	"RM-402"
+"usr-018"	"RM-110"
+"usr-019"	"RM-111"
+"usr-020"	"RM-208"
+"usr-002"	"RM-108"
