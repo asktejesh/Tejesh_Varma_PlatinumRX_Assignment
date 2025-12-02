@@ -1,0 +1,16 @@
+SELECT 
+    bc.booking_id,
+    SUM(i.item_rate * bc.item_quantity) AS total_amount
+FROM booking_commercials bc
+JOIN items i ON bc.item_id = i.item_id
+WHERE strftime('%m', bc.bill_date) = '11'
+  AND strftime('%Y', bc.bill_date) = '2021'
+GROUP BY bc.booking_id;
+
+"bk-106"	"520"
+"bk-107"	"258"
+"bk-108"	"340"
+"bk-109"	"270"
+"bk-110"	"460"
+"bk-111"	"650"
+"bk-112"	"480"
