@@ -27,19 +27,4 @@ SELECT
     END AS category
 FROM ranked
 WHERE most_rank = 1 OR least_rank = 1
-ORDER BY month_no;
-
-"9"	"Tawa Paratha"	"3"	"Most Ordered"
-"9"	"Chai"	"2"	"Least Ordered"
-"10"	"Chai"	"5"	"Most Ordered"
-"10"	"Tawa Paratha"	"5"	"Most Ordered"
-"10"	"Cold Coffee"	"1"	"Least Ordered"
-"10"	"Masala Dosa"	"1"	"Least Ordered"
-"10"	"Pasta Alfredo"	"1"	"Least Ordered"
-"11"	"Cold Coffee"	"8"	"Most Ordered"
-"11"	"Chicken Biryani"	"1"	"Least Ordered"
-"11"	"Garlic Bread"	"1"	"Least Ordered"
-"11"	"Masala Dosa"	"1"	"Least Ordered"
-"12"	"Tawa Paratha"	"9"	"Most Ordered"
-"12"	"Noodles"	"1"	"Least Ordered"
-"12"	"Sandwich"	"1"	"Least Ordered"
+ORDER BY month_no, category;
